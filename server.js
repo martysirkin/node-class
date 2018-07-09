@@ -48,6 +48,12 @@ app.get('/', (req, res) => {
   })
 });
 
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio.hbs', {
+        pageTitle: 'Portfolios!'
+    })
+});
+
 app.get('/bad', (req, res) => {
   res.send({
       errorMessage: 'Unable to process request.'
